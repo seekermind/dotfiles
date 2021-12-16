@@ -1,0 +1,55 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+
+
+[backlight]
+command=~/.shellscripts/i3backlight.sh
+color=#3AAFA9
+interval=once
+signal=10
+
+[volume]
+color=#42B883
+command=sh ~/.shellscripts/i3volume.sh
+interval=once
+signal=10
+
+[wifi]
+color=#32DBC6
+command=sh ~/.shellscripts/i3wifi.sh
+interval=1
+
+
+[battery]
+color=#69F49C
+command=sh ~/.shellscripts/i3battery.sh
+interval=1
+
+[cpu]
+label=
+command=echo " `uptime | awk -F "," '{print $(NF-2) }' | awk '{print $NF}'`"
+interval=5
+color=#32DBC6
+
+[Memory]
+color=#32DBC6
+label= 
+command=echo "scale=2;`free | awk '/Mem/ {print $4*100 "/" $2}'`" | bc && echo %
+interval=5
+
+
+[time]
+label= 
+color=#28b672
+command=date '+%a, %b %d %I:%M %p'
+interval=1

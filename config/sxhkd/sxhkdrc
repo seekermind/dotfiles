@@ -1,0 +1,21 @@
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10% && pkill -SIGRTMIN+9 dwmblocks
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -10% && pkill -SIGRTMIN+9 dwmblocks
+ctrl+Up
+	pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -SIGRTMIN+9 dwmblocks
+ctrl+Down
+	pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -SIGRTMIN+9 dwmblocks
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -SIGRTMIN+9 dwmblocks
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -SIGRTMIN+9 dwmblocks
+XF86MonBrightnessUp 
+	xbacklight + 10% && pkill -SIGRTMIN+10 dwmblocks
+XF86MonBrightnessDown 
+	xbacklight - 10% && pkill -SIGRTMIN+10 dwmblocks
+
+alt+shift+s
+	scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Downloads/scrots/'
+alt+s
+	scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Downloads/scrots'

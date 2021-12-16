@@ -1,0 +1,12 @@
+[Added Associations]
+application/pdf=org.inkscape.Inkscape.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+x-scheme-handler/magnet=torrent.desktop;
+application/x-bittorrent=torrent.desktop;
+audio/mp4=mpv.desktop;
+application/octet-stream=userapp-st -e vim-HWFU80.desktop;
+
+[Default Applications]
+inode/directory=Thunar.desktop
+application/pdf=org.pwmt.zathura.desktop
+audio/mpegapplication/octet-stream=mpv.desktop
+text/x-shellscript=vim.desktop
